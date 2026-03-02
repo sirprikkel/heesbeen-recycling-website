@@ -3,227 +3,121 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diensten – Heesbeen Recycling</title>
-  <meta name="description" content="Diensten van Heesbeen Recycling: inkoop ferro en non-ferro metalen, recycling van accu's en katalysatoren, container plaatsing en sloop & demontage.">
+  <title>Diensten — Heesbeen Recycling</title>
+  <meta name="description" content="In- en verkoop metalen, container plaatsing, accu's en katalysatoren recycling, sloop en demontage. Heesbeen Recycling Oss.">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>body { font-family: 'Plus Jakarta Sans', sans-serif; }</style>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            navy: { DEFAULT: '#0F172A', light: '#1E293B', medium: '#334155' },
-            sky: { brand: '#0369A1', light: '#0EA5E9' },
-            slate: { bg: '#F8FAFC' }
-          }
-        }
-      }
-    }
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>tailwind.config={theme:{extend:{colors:{primary:'#0F172A',secondary:'#334155',cta:'#0369A1','cta-hover':'#0284C7',bg:'#F8FAFC','security-green':'#059669','metric-gold':'#F59E0B',trust:'#1E40AF'},fontFamily:{heading:['Lexend','sans-serif'],body:['Source Sans 3','sans-serif']}}}}</script>
+  <style>
+    body{font-family:'Source Sans 3',sans-serif;color:#020617;background:#F8FAFC;scroll-behavior:smooth}h1,h2,h3,h4{font-family:'Lexend',sans-serif}
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+    @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+  </style>
 </head>
-<body class="bg-slate-bg text-navy">
-
-  <!-- Navbar -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        <a href="index.html" class="flex items-center gap-3 cursor-pointer">
-          <div class="w-8 h-8 bg-sky-brand rounded flex items-center justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
-          </div>
-          <span class="text-white font-bold text-lg">Heesbeen Recycling</span>
-        </a>
-        <div class="hidden md:flex items-center gap-8">
-          <a href="index.html" class="text-white/80 hover:text-white transition-colors duration-200 text-sm font-medium cursor-pointer">Home</a>
-          <a href="diensten.html" class="text-white text-sm font-medium cursor-pointer">Diensten</a>
-          <a href="contact.html" class="text-white/80 hover:text-white transition-colors duration-200 text-sm font-medium cursor-pointer">Contact</a>
-          <a href="tel:0412632957" class="bg-sky-brand text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-sky-500 transition-colors duration-200 cursor-pointer">0412 632 957</a>
-        </div>
-        <button id="menuBtn" class="md:hidden text-white cursor-pointer p-2">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-        </button>
+<body class="bg-bg">
+  <nav class="fixed top-0 w-full z-50 bg-primary shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-3"><img src="images/logo.jpg" alt="Logo" class="h-10 rounded"><span class="font-heading text-white font-semibold text-lg hidden sm:block">Heesbeen Recycling</span></a>
+      <div class="hidden md:flex items-center gap-6 text-sm">
+        <a href="index.html" class="text-white/70 hover:text-white transition-colors">Home</a><a href="diensten.html" class="text-white font-medium hover:text-cta-hover transition-colors">Diensten</a><a href="over-ons.html" class="text-white/70 hover:text-white transition-colors">Over Ons</a><a href="contact.html" class="text-white/70 hover:text-white transition-colors">Contact</a>
+        <a href="tel:0412632957" class="bg-cta text-white px-5 py-2.5 rounded-lg font-medium hover:bg-cta-hover transition-colors cursor-pointer min-h-[44px] flex items-center">Bel ons</a>
       </div>
+      <button id="menuBtn" class="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center cursor-pointer" aria-label="Menu"><svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
     </div>
-    <div id="mobileMenu" class="hidden md:hidden bg-navy border-t border-white/10">
-      <div class="px-4 py-4 flex flex-col gap-4">
-        <a href="index.html" class="text-white/80 hover:text-white text-sm cursor-pointer">Home</a>
-        <a href="diensten.html" class="text-white text-sm cursor-pointer">Diensten</a>
-        <a href="contact.html" class="text-white/80 hover:text-white text-sm cursor-pointer">Contact</a>
-        <a href="tel:0412632957" class="bg-sky-brand text-white px-4 py-2 rounded-lg text-sm font-semibold text-center cursor-pointer">0412 632 957</a>
-      </div>
-    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-primary border-t border-white/10 px-4 py-4 space-y-3"><a href="index.html" class="block text-white/70 py-2">Home</a><a href="diensten.html" class="block text-white py-2">Diensten</a><a href="over-ons.html" class="block text-white/70 py-2">Over Ons</a><a href="contact.html" class="block text-white/70 py-2">Contact</a><a href="tel:0412632957" class="block bg-cta text-white text-center px-4 py-3 rounded-lg">Bel 0412 – 63 29 57</a></div>
   </nav>
 
-  <!-- Page header -->
-  <section class="pt-32 pb-16 bg-navy">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-4xl sm:text-5xl font-extrabold text-white mb-4">Onze Diensten</h1>
-      <p class="text-white/70 text-lg max-w-2xl mx-auto">Zowel particulieren als bedrijven kunnen gebruik maken van de dienstverlening van Heesbeen Recycling.</p>
+  <section class="bg-primary pt-16"><div class="py-20"><div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8"><h1 class="font-heading text-4xl md:text-5xl font-bold text-white">Onze diensten</h1><p class="text-white/50 mt-4 max-w-lg">Van enkelstuks huishoudelijk metaal tot compleet sloop- en demontagetrajecten.</p></div></div></section>
+
+  <!-- In- en verkoop -->
+  <section class="py-20 bg-bg">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 grid md:grid-cols-2 gap-14 items-center reveal">
+      <div><img src="images/google_place_1.jpg" alt="Metaalhandel" class="rounded-xl shadow-md w-full object-cover h-[380px]" loading="lazy"></div>
+      <div>
+        <div class="inline-flex items-center gap-2 bg-cta/10 rounded-full px-3 py-1 mb-4"><span class="text-cta text-xs font-medium">Kernactiviteit</span></div>
+        <h2 class="font-heading text-3xl font-bold text-primary mb-4">In- en verkoop metalen</h2>
+        <p class="text-secondary/70 leading-relaxed mb-4">Heesbeen Recycling hanteert beursgerelateerde prijzen gebaseerd op de London Metal Exchange. Dat betekent dat u altijd kunt rekenen op een transparante en marktconforme vergoeding voor uw gebruikte metalen.</p>
+        <p class="text-secondary/70 leading-relaxed mb-4">Jaarlijks verwerken wij circa 20.000 ton ijzerschroot en enkele duizenden tonnen non-ferro. Ons werkgebied bestrijkt de Benelux, Duitsland, Frankrijk, Scandinavië en Afrika.</p>
+        <div class="bg-white rounded-lg border border-primary/5 p-4 mt-6">
+          <p class="text-primary text-sm font-medium">Zoekt u een solide partner voor afname van uw schroot? U heeft die bij deze gevonden.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Diensten detail -->
-  <section class="py-20 bg-slate-bg">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-
-      <!-- Inkoop metalen -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <div class="inline-flex items-center gap-2 bg-sky-brand/10 rounded-full px-4 py-2 mb-4">
-            <span class="text-sky-brand text-sm font-semibold">Dienst 1</span>
-          </div>
-          <h2 class="text-3xl font-extrabold text-navy mb-4">In- en Verkoop Metalen</h2>
-          <p class="text-navy-medium leading-relaxed mb-6">
-            Heesbeen Recycling is gespecialiseerd in de in- en verkoop van gebruikte metalen — zowel ferro als non-ferro. Of het nu gaat om enkelstuks (huishoudelijk) oud metaal of metaalafval van bedrijven, onze deskundige medewerkers zorgen voor een snelle, efficiënte en correcte afhandeling.
-          </p>
-          <ul class="space-y-3">
-            <li class="flex items-center gap-3 text-navy-medium">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-sky-brand flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              Ferro metalen (ijzer, staal)
-            </li>
-            <li class="flex items-center gap-3 text-navy-medium">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-sky-brand flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              Non-ferro metalen (koper, aluminium, lood, etc.)
-            </li>
-            <li class="flex items-center gap-3 text-navy-medium">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-sky-brand flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              Huishoudelijk oud metaal (enkelstuks)
-            </li>
-            <li class="flex items-center gap-3 text-navy-medium">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-sky-brand flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              Metaalafval van bedrijven
-            </li>
-          </ul>
-        </div>
-        <div class="bg-white rounded-2xl p-8 shadow-md">
-          <div class="w-16 h-16 bg-sky-brand/10 rounded-2xl flex items-center justify-center mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-sky-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-          </div>
-          <h3 class="text-xl font-bold text-navy mb-3">Particulier of zakelijk?</h3>
-          <p class="text-navy-medium leading-relaxed mb-6">Wij helpen zowel particulieren als bedrijven. Kom langs met uw metaal of neem contact op voor meer informatie.</p>
-          <a href="tel:0412632957" class="inline-flex items-center gap-2 bg-sky-brand text-white px-6 py-3 rounded-xl font-semibold hover:bg-sky-500 transition-all duration-200 cursor-pointer w-full justify-center">
-            Bel 0412 632 957
-          </a>
+  <!-- Container plaatsing -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 grid md:grid-cols-2 gap-14 items-center reveal">
+      <div class="md:order-2"><img src="images/google_place_2.jpg" alt="Container" class="rounded-xl shadow-md w-full object-cover h-[380px]" loading="lazy"></div>
+      <div class="md:order-1">
+        <h2 class="font-heading text-3xl font-bold text-primary mb-4">Container plaatsing</h2>
+        <p class="text-secondary/70 leading-relaxed mb-4">Metaalverwerkende bedrijven kunnen kiezen uit diverse containers van 0,6 tot 40m³. Eén telefoontje of mail en binnen 24 uur is het plaatsen en legen gebeurd.</p>
+        <p class="text-secondary/70 leading-relaxed mb-4">Heeft u voldoende tonnage? Dan plaatsen we de container(s) gratis. Verder beschikken we over een mobiele kraan voor laden op locaties buiten het bedrijf.</p>
+        <div class="bg-cta/5 rounded-lg border border-cta/10 p-4 mt-6">
+          <p class="text-cta text-sm font-medium">Neem contact op voor containerplaatsing: 0412 – 63 29 57</p>
         </div>
       </div>
-
-      <hr class="border-navy/10">
-
-      <!-- Accu's en katalysatoren -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div class="order-2 lg:order-1 bg-white rounded-2xl p-8 shadow-md">
-          <div class="w-16 h-16 bg-sky-brand/10 rounded-2xl flex items-center justify-center mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-sky-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-          </div>
-          <h3 class="text-xl font-bold text-navy mb-3">VROM vergund</h3>
-          <p class="text-navy-medium leading-relaxed">Het Ministerie van VROM heeft ons vergunning verleend voor het recyclen van accu's en katalysatoren. Uw garantie voor veilige en verantwoorde verwerking.</p>
-        </div>
-        <div class="order-1 lg:order-2">
-          <div class="inline-flex items-center gap-2 bg-sky-brand/10 rounded-full px-4 py-2 mb-4">
-            <span class="text-sky-brand text-sm font-semibold">Dienst 2</span>
-          </div>
-          <h2 class="text-3xl font-extrabold text-navy mb-4">Accu's & Katalysatoren</h2>
-          <p class="text-navy-medium leading-relaxed mb-6">
-            Met ingang van januari 2011 behoort ook het recyclen van accu's en katalysatoren tot onze bedrijfsactiviteiten. Het Ministerie van VROM heeft ons daartoe vergunning verleend.
-          </p>
-          <p class="text-navy-medium leading-relaxed">
-            Onze vergunningen vormen een garantie voor kwaliteit, professionaliteit en veiligheid — en dus ook de waarborg voor uw belangen.
-          </p>
-        </div>
-      </div>
-
-      <hr class="border-navy/10">
-
-      <!-- Container plaatsing -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <div class="inline-flex items-center gap-2 bg-sky-brand/10 rounded-full px-4 py-2 mb-4">
-            <span class="text-sky-brand text-sm font-semibold">Dienst 3</span>
-          </div>
-          <h2 class="text-3xl font-extrabold text-navy mb-4">Container Plaatsing</h2>
-          <p class="text-navy-medium leading-relaxed mb-6">
-            Voor bedrijven bieden wij de mogelijkheid van container plaatsing. Handig voor het verzamelen en afvoeren van metaalafval op uw bedrijfslocatie.
-          </p>
-          <a href="contact.html" class="inline-flex items-center gap-2 bg-sky-brand text-white px-6 py-3 rounded-xl font-semibold hover:bg-sky-500 transition-all duration-200 cursor-pointer">
-            Vraag container aan
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-        <div class="bg-white rounded-2xl p-8 shadow-md">
-          <div class="w-16 h-16 bg-sky-brand/10 rounded-2xl flex items-center justify-center mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-sky-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
-          </div>
-          <h3 class="text-xl font-bold text-navy mb-3">Sloop & Demontage</h3>
-          <p class="text-navy-medium leading-relaxed">Een compleet traject van sloop en demontage van machines en apparatuur. Onze deskundige medewerkers zorgen voor een snelle, efficiënte en correcte afhandeling.</p>
-        </div>
-      </div>
-
     </div>
   </section>
 
-  <!-- Kwaliteit sectie -->
-  <section class="py-16 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-extrabold text-navy mb-6">Kwaliteit, Professionaliteit en Veiligheid</h2>
-      <p class="text-navy-medium text-lg leading-relaxed mb-8">
-        Om de benodigde vergunningen te verkrijgen en te behouden, moet ons bedrijf aan strenge eisen voldoen. In alle gevallen zijn de eisen gericht op het bewaken van het kwaliteitsniveau van onze bedrijfsvoering en dienstverlening. Onze vergunningen vormen een garantie voor kwaliteit, professionaliteit en veiligheid. En dus ook de waarborg voor úw belangen.
-      </p>
+  <!-- Accu's & katalysatoren -->
+  <section class="py-20 bg-bg">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 grid md:grid-cols-2 gap-14 items-center reveal">
+      <div><img src="images/kantoor.jpg" alt="Kantoor" class="rounded-xl shadow-md w-full object-cover h-[380px]" loading="lazy"></div>
+      <div>
+        <div class="inline-flex items-center gap-2 bg-security-green/10 rounded-full px-3 py-1 mb-4">
+          <svg class="w-3 h-3 text-security-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
+          <span class="text-security-green text-xs font-medium">VROM vergund</span>
+        </div>
+        <h2 class="font-heading text-3xl font-bold text-primary mb-4">Accu's & katalysatoren</h2>
+        <p class="text-secondary/70 leading-relaxed mb-4">Met ingang van januari 2011 behoort ook het recyclen van accu's en katalysatoren tot onze bedrijfsactiviteiten. Het Ministerie van VROM heeft ons daartoe vergunning verleend.</p>
+        <p class="text-secondary/70 leading-relaxed">Marktconforme restwaardevergoeding op basis van de London Metal Exchange.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Acceptatiebeleid -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 reveal">
+      <h2 class="font-heading text-3xl font-bold text-primary mb-4">Acceptatiebeleid</h2>
+      <p class="text-secondary/60 mb-8 max-w-2xl">In verband met milieu- en veiligheidseisen gelden strikte regels voor wat wij kunnen accepteren.</p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead><tr class="border-b-2 border-primary/10"><th class="text-left py-3 px-4 font-heading font-semibold text-primary">Materiaal</th><th class="text-left py-3 px-4 font-heading font-semibold text-primary">Beleid</th></tr></thead>
+          <tbody class="text-secondary/70">
+            <tr class="border-b border-primary/5"><td class="py-3 px-4">Asbest</td><td class="py-3 px-4 text-red-600 font-medium">Wordt geweigerd</td></tr>
+            <tr class="border-b border-primary/5"><td class="py-3 px-4">(Auto)banden</td><td class="py-3 px-4 text-red-600 font-medium">Geweigerd of kosten doorberekend</td></tr>
+            <tr class="border-b border-primary/5"><td class="py-3 px-4">Explosieven</td><td class="py-3 px-4 text-red-600 font-medium">Wordt geweigerd</td></tr>
+            <tr class="border-b border-primary/5"><td class="py-3 px-4">Gasflessen</td><td class="py-3 px-4">Leeg + afsluiter verwijderd (anders €125/stuk)</td></tr>
+            <tr class="border-b border-primary/5"><td class="py-3 px-4">Gesloten materialen</td><td class="py-3 px-4 text-red-600 font-medium">Wordt geweigerd</td></tr>
+            <tr class="border-b border-primary/5"><td class="py-3 px-4">Koelkasten/diepvriezen</td><td class="py-3 px-4 text-red-600 font-medium">Wordt geweigerd</td></tr>
+            <tr class="border-b border-primary/5"><td class="py-3 px-4">Radioactieve materialen</td><td class="py-3 px-4 text-red-600 font-medium">Wordt geweigerd</td></tr>
+            <tr class="border-b border-primary/5"><td class="py-3 px-4">Hout, kunststof, glas, puin</td><td class="py-3 px-4">Aanhangend: vuilaftrek. Anders geweigerd</td></tr>
+            <tr class="border-b border-primary/5"><td class="py-3 px-4">Grondtanks / HBO tanks</td><td class="py-3 px-4">Leeg + reinigingscertificaat + mangat geopend</td></tr>
+            <tr><td class="py-3 px-4">Verfblikken (schraap leeg)</td><td class="py-3 px-4 text-security-green font-medium">Wordt geaccepteerd</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wegen -->
+  <section class="py-20 bg-bg">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 reveal">
+      <h2 class="font-heading text-3xl font-bold text-primary mb-4">Modernste apparatuur</h2>
+      <p class="text-secondary/70 leading-relaxed max-w-3xl mb-8">Heesbeen Recycling maakt gebruik van de modernste apparatuur op het gebied van wegen, administratie en facturatie. Alles wordt digitaal gewogen conform de Wet Milieubeheer.</p>
+      <div class="grid sm:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl border border-primary/5 p-6 text-center"><p class="font-heading text-3xl font-bold text-cta">60 ton</p><p class="text-secondary/50 text-sm mt-1">Geijkte weegbrug</p></div>
+        <div class="bg-white rounded-xl border border-primary/5 p-6 text-center"><p class="font-heading text-3xl font-bold text-cta">2× 3 ton</p><p class="text-secondary/50 text-sm mt-1">Geijkte weegplateaus</p></div>
+        <div class="bg-white rounded-xl border border-primary/5 p-6 text-center"><p class="font-heading text-3xl font-bold text-cta">Newton</p><p class="text-secondary/50 text-sm mt-1">Digitale facturatie</p></div>
+      </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="py-16 bg-sky-brand">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-extrabold text-white mb-4">Vragen over onze diensten?</h2>
-      <p class="text-white/80 text-lg mb-8">Neem contact op — wij helpen u graag verder.</p>
-      <a href="tel:0412632957" class="inline-flex items-center gap-2 bg-white text-sky-brand px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition-colors duration-200 cursor-pointer">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-        Bel 0412 632 957
-      </a>
-    </div>
-  </section>
+  <section class="py-20 bg-primary text-center"><div class="max-w-3xl mx-auto px-4"><h2 class="font-heading text-3xl font-bold text-white mb-4">Offerte of prijsvergelijking?</h2><p class="text-white/50 mb-8">Neem telefonisch of per mail contact op.</p><div class="flex flex-wrap justify-center gap-4"><a href="tel:0412632957" class="bg-cta text-white px-8 py-4 rounded-lg font-semibold hover:bg-cta-hover transition-colors cursor-pointer min-h-[44px] inline-flex items-center">0412 – 63 29 57</a><a href="mailto:info@heesbeenrecycling.nl" class="border border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors cursor-pointer min-h-[44px] inline-flex items-center">E-mail sturen</a></div></div></section>
 
-  <!-- Footer -->
-  <footer class="bg-navy border-t border-white/10 py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-        <div>
-          <h3 class="text-white font-bold text-lg mb-4">Heesbeen Recycling</h3>
-          <p class="text-white/60 text-sm leading-relaxed">Familiebedrijf al ruim 60 jaar gespecialiseerd in de in- en verkoop van gebruikte metalen in Oss.</p>
-        </div>
-        <div>
-          <h3 class="text-white font-bold mb-4">Diensten</h3>
-          <ul class="space-y-2">
-            <li><a href="diensten.html" class="text-white/60 hover:text-white text-sm cursor-pointer transition-colors duration-200">In- en Verkoop Metalen</a></li>
-            <li><a href="diensten.html" class="text-white/60 hover:text-white text-sm cursor-pointer transition-colors duration-200">Accu's & Katalysatoren</a></li>
-            <li><a href="diensten.html" class="text-white/60 hover:text-white text-sm cursor-pointer transition-colors duration-200">Container Plaatsing</a></li>
-            <li><a href="diensten.html" class="text-white/60 hover:text-white text-sm cursor-pointer transition-colors duration-200">Sloop & Demontage</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-white font-bold mb-4">Contact</h3>
-          <ul class="space-y-2 text-sm text-white/60">
-            <li>Etruskenweg 2, 5349 AZ Oss</li>
-            <li><a href="tel:0412632957" class="hover:text-white cursor-pointer transition-colors duration-200">0412 632 957</a></li>
-            <li class="pt-2 font-medium text-white/40">Openingstijden:</li>
-            <li>Ma–vr: 07:30–12:00 / 13:00–17:00</li>
-            <li>Za: 07:30–15:00</li>
-            <li>Zo: Gesloten</li>
-          </ul>
-        </div>
-      </div>
-      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/40">
-        <span>© 2024 Heesbeen Recycling B.V. — KvK 57596867</span>
-        <span>Gebouwd door <a href="https://www.code-lieshout.nl" class="text-white/60 hover:text-white transition-colors duration-200 cursor-pointer">Code Lieshout</a></span>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('menuBtn').addEventListener('click', () => {
-      document.getElementById('mobileMenu').classList.toggle('hidden');
-    });
-  </script>
+  <footer class="bg-primary border-t border-white/5 py-12"><div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 grid sm:grid-cols-3 gap-8"><div><h3 class="font-heading font-semibold text-white mb-3">Heesbeen Recycling</h3><p class="text-white/40 text-sm">Al ruim 60 jaar metaalrecycling in Oss.</p></div><div><h4 class="font-heading font-medium text-white text-sm mb-3">Contact</h4><ul class="space-y-2 text-sm text-white/40"><li>Etruskenweg 2, 5349 AZ Oss</li><li><a href="tel:0412632957" class="hover:text-white cursor-pointer">0412 – 63 29 57</a></li><li><a href="mailto:info@heesbeenrecycling.nl" class="hover:text-white cursor-pointer">info@heesbeenrecycling.nl</a></li></ul></div><div><h4 class="font-heading font-medium text-white text-sm mb-3">Openingstijden</h4><ul class="space-y-1 text-sm text-white/40"><li>Ma–Vr: 07:30–12:00, 13:00–17:00</li><li>Za: 07:30–15:00</li><li>Zo: Gesloten</li></ul></div></div><div class="max-w-7xl mx-auto px-4 mt-8 pt-6 border-t border-white/5 text-center text-white/20 text-xs">&copy; 2026 Heesbeen Recycling VOF. Gebouwd door <a href="https://www.code-lieshout.nl" class="hover:text-cta cursor-pointer">Code Lieshout</a>.</div></footer>
+  <script>document.getElementById('menuBtn').addEventListener('click',()=>{document.getElementById('mobileMenu').classList.toggle('hidden')});const o=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');o.unobserve(el.target)}})},{threshold:0.15});document.querySelectorAll('.reveal').forEach(el=>o.observe(el));</script>
 </body>
 </html>
